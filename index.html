@@ -38,6 +38,16 @@
 
 <body>
 
+  <!-- Theme Switcher -->
+  <div class="theme-switcher">
+    <button class="theme-btn" data-theme="light" title="Light Mode" aria-label="Switch to light mode">
+      <i class="fa-solid fa-sun"></i>
+    </button>
+    <button class="theme-btn" data-theme="dark" title="Dark Mode" aria-label="Switch to dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </div>
+
   <div class="container">
 
     <!-- Profile Section -->
@@ -64,16 +74,16 @@
         </div>
 
         <div class="social-links">
-          <a href="mailto:distex.lin@gmail.com" class="social-btn">
+          <a href="mailto:distex.lin@gmail.com" class="link-btn">
             <i class="fa-solid fa-envelope"></i> Email
           </a>
-          <a href="https://scholar.google.com/citations?user=NpiqoikAAAAJ" class="social-btn">
+          <a href="https://scholar.google.com/citations?user=NpiqoikAAAAJ" class="link-btn">
             <i class="fa-solid fa-graduation-cap"></i> Google Scholar
           </a>
-          <a href="https://www.semanticscholar.org/author/Tianlin-Pan/2364935984" class="social-btn">
+          <a href="https://www.semanticscholar.org/author/Tianlin-Pan/2364935984" class="link-btn">
             <i class="fa-solid fa-book"></i> Semantic Scholar
           </a>
-          <a href="https://github.com/ldiex/" class="social-btn">
+          <a href="https://github.com/ldiex/" class="link-btn">
             <i class="fa-brands fa-github"></i> GitHub
           </a>
         </div>
@@ -133,9 +143,9 @@
             </div>
             <div class="card-venue">arXiv Preprint</div>
             <div class="card-links">
-              <a href="https://sd-world.github.io/"><i class="fa-solid fa-globe"></i> Project</a>
-              <a href="https://arxiv.org/abs/2601.15281"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
-              <a href="https://github.com/xbyym/StableWorld"><i class="fa-brands fa-github"></i> Code</a>
+              <a href="https://sd-world.github.io/" class="link-btn"><i class="fa-solid fa-globe"></i> Project</a>
+              <a href="https://arxiv.org/abs/2601.15281" class="link-btn"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
+              <a href="https://github.com/xbyym/StableWorld" class="link-btn"><i class="fa-brands fa-github"></i> Code</a>
             </div>
           </div>
         </article>
@@ -161,9 +171,9 @@
             </div>
             <div class="card-venue">arXiv Preprint</div>
             <div class="card-links">
-              <a href="https://diverse-ar.github.io/"><i class="fa-solid fa-globe"></i> Project</a>
-              <a href="https://arxiv.org/abs/2512.02931"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
-              <a href="https://github.com/xbyym/DiverseAR"><i class="fa-brands fa-github"></i> Code</a>
+              <a href="https://diverse-ar.github.io/" class="link-btn"><i class="fa-solid fa-globe"></i> Project</a>
+              <a href="https://arxiv.org/abs/2512.02931" class="link-btn"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
+              <a href="https://github.com/xbyym/DiverseAR" class="link-btn"><i class="fa-brands fa-github"></i> Code</a>
               <!-- <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Vchitect/DCM?style=social"> -->
             </div>
           </div>
@@ -189,9 +199,9 @@
             </div>
             <div class="card-venue">ICCV 2025</div>
             <div class="card-links">
-              <a href="https://vchitect.github.io/TACA/"><i class="fa-solid fa-globe"></i> Project</a>
-              <a href="https://arxiv.org/abs/2506.07986"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
-              <a href="https://github.com/Vchitect/TACA"><i class="fa-brands fa-github"></i> Code</a>
+              <a href="https://vchitect.github.io/TACA/" class="link-btn"><i class="fa-solid fa-globe"></i> Project</a>
+              <a href="https://arxiv.org/abs/2506.07986" class="link-btn"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
+              <a href="https://github.com/Vchitect/TACA" class="link-btn"><i class="fa-brands fa-github"></i> Code</a>
               <!-- <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Vchitect/TACA?style=social"> -->
             </div>
           </div>
@@ -218,9 +228,9 @@
             </div>
             <div class="card-venue">ICCV 2025</div>
             <div class="card-links">
-              <a href="https://vchitect.github.io/DCM/"><i class="fa-solid fa-globe"></i> Project</a>
-              <a href="https://arxiv.org/abs/2506.03123"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
-              <a href="https://github.com/Vchitect/DCM"><i class="fa-brands fa-github"></i> Code</a>
+              <a href="https://vchitect.github.io/DCM/" class="link-btn"><i class="fa-solid fa-globe"></i> Project</a>
+              <a href="https://arxiv.org/abs/2506.03123" class="link-btn"><i class="fa-solid fa-file-pdf"></i> arXiv</a>
+              <a href="https://github.com/Vchitect/DCM" class="link-btn"><i class="fa-brands fa-github"></i> Code</a>
               <!-- <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Vchitect/DCM?style=social"> -->
             </div>
           </div>
@@ -340,6 +350,62 @@
     </footer>
 
   </div>
+
+  <script>
+    // Theme switcher functionality
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    const html = document.documentElement;
+
+    // Get the actual theme to apply (considering system preference)
+    function getEffectiveTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      
+      // If user has explicitly set a theme, use it
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        return savedTheme;
+      }
+      
+      // Otherwise, follow system preference
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    // Apply theme to the document
+    function applyTheme(theme) {
+      html.setAttribute('data-theme', theme);
+    }
+
+    // Update active button state based on current effective theme
+    function updateActiveButton() {
+      const effectiveTheme = getEffectiveTheme();
+      themeButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.theme === effectiveTheme);
+      });
+    }
+
+    // Initialize theme on page load
+    applyTheme(getEffectiveTheme());
+    updateActiveButton();
+
+    // Handle theme button clicks
+    themeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = btn.dataset.theme;
+        localStorage.setItem('theme', theme);
+        applyTheme(theme);
+        updateActiveButton();
+      });
+    });
+
+    // Listen for system theme changes (when user hasn't set an explicit preference)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+      const savedTheme = localStorage.getItem('theme');
+      // Only respond to system changes if user hasn't explicitly set a theme
+      if (!savedTheme || (savedTheme !== 'light' && savedTheme !== 'dark')) {
+        applyTheme(getEffectiveTheme());
+        updateActiveButton();
+      }
+    });
+  </script>
 
 </body>
 
