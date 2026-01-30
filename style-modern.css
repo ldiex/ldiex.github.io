@@ -431,6 +431,8 @@ section::before {
   justify-content: space-between;
   align-items: baseline;
   gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
 }
 
 .exp-header h3 {
@@ -438,6 +440,9 @@ section::before {
   text-transform: none;
   letter-spacing: 0.04em;
   font-weight: 600;
+  overflow-wrap: break-word;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .exp-role {
@@ -450,6 +455,8 @@ section::before {
 .exp-date {
   font-family: "IBM Plex Mono", monospace;
   color: var(--text-tertiary);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 textarea,
@@ -566,5 +573,19 @@ footer p {
     width: 38px;
     height: 38px;
     font-size: 1rem;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .exp-header h3 {
+    font-size: 1.1rem;
   }
 }
