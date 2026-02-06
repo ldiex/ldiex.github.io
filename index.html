@@ -320,11 +320,11 @@
     // Render Publications
     function renderPublications() {
       const container = document.getElementById('publications-container');
-      
+
       publications.forEach(pub => {
         const article = document.createElement('article');
         article.className = pub.highlighted ? 'card highlighted' : 'card';
-        
+
         // Render authors
         const authorsHTML = pub.authors.map(author => {
           if (author.isSelf) {
@@ -335,16 +335,13 @@
             return `${author.name}${author.equal ? '<sup>*</sup>' : ''}`;
           }
         }).join(',\n              ');
-        
+
         // Render links
-        const linksHTML = pub.links.map(link => 
+        const linksHTML = pub.links.map(link =>
           `<a href="${link.url}" class="link-btn"><i class="${link.icon}"></i> ${link.text}</a>`
         ).join('\n              ');
-        
+
         article.innerHTML = `
-          <div class="card-image-wrapper">
-            <img src="${pub.image}" alt="${pub.id}" class="card-image">
-          </div>
           <div class="card-content">
             <h3 class="card-title">
               <a href="${pub.links[0].url}">${pub.title}</a>
@@ -358,7 +355,7 @@
             </div>
           </div>
         `;
-        
+
         container.appendChild(article);
       });
     }
