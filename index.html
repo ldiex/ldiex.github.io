@@ -97,6 +97,10 @@
       <h2 class="section-title">News</h2>
       <ul class="news-list">
         <li class="news-item">
+          <span class="news-date">[2026.03]</span>
+          <span>🎉 One paper is accepted by <strong>CVPR 2026</strong>.</span>
+        </li>
+        <li class="news-item">
           <span class="news-date">[2025.10]</span>
           <span>🎉 I'm awarded Chinese <strong>National Scholarship</strong>.</span>
         </li>
@@ -189,7 +193,7 @@
     </section>
 
     <footer>
-      <p>Last updated: Jan 2026</p>
+      <p>Last updated: Mar 2026</p>
     </footer>
 
   </div>
@@ -197,6 +201,29 @@
   <script>
     // Publications Data
     const publications = [
+      {
+        id: 'nova',
+        title: 'NOVA: Sparse Control, Dense Synthesis for Pair-Free Video Editing',
+        image: 'images/nova.png',
+        authors: [
+          { name: 'Tianlin Pan', isSelf: true },
+          { name: 'Jiayi Dai', url: 'https://openreview.net/profile?id=~Jiayi_Dai5' },
+          { name: 'Chenpu Yuan', url: 'https://openreview.net/profile?id=~Chenpu_Yuan2' },
+          { name: 'Zhengyao Lv', url: 'https://scholar.google.com/citations?user=FkkaUgwAAAAJ&hl=en' },
+          { name: 'Binxin Yang', url: 'https://binxinyang.github.io/' },
+          { name: 'Hubery Yin', url: 'https://openreview.net/profile?id=~Hubery_Yin1' },
+          { name: 'Chen Li', url: 'https://scholar.google.com/citations?user=WDJL3gYAAAAJ&hl=zh-CN' },
+          { name: 'Jing Lyu', url: 'https://openreview.net/profile?id=~Jing_LYU2' },
+          { name: 'Caifeng Shan', url: 'https://caifeng-shan.github.io/' },
+          { name: 'Chenyang Si', url: 'https://chenyangsi.top/' }
+        ],
+        venue: 'CVPR 2026',
+        links: [
+          { type: 'arxiv', url: 'https://arxiv.org/abs/2603.02802', icon: 'fa-solid fa-file-pdf', text: 'arXiv' },
+          { type: 'code', url: 'https://github.com/WeChatCV/NovaEdit', icon: 'fa-brands fa-github', text: 'Code' }
+        ],
+        highlighted: true
+      },
       {
         id: 'stableworld',
         title: 'StableWorld: Towards Stable and Consistent Long Interactive Video Generation',
@@ -234,7 +261,7 @@
           { name: 'Chen Li', url: 'https://scholar.google.com/citations?user=WDJL3gYAAAAJ&hl=zh-CN' },
           { name: 'Chenyang Si', url: 'https://chenyangsi.github.io/' }
         ],
-        venue: 'arXiv Preprint',
+        venue: 'CVPR 2026 Findings',
         links: [
           { type: 'project', url: 'https://diverse-ar.github.io/', icon: 'fa-solid fa-globe', text: 'Project' },
           { type: 'arxiv', url: 'https://arxiv.org/abs/2512.02931', icon: 'fa-solid fa-file-pdf', text: 'arXiv' },
