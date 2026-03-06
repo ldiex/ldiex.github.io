@@ -174,7 +174,7 @@
         </li>
         <li class="news-item">
           <span class="news-date" style="min-width: 150px;">Reviewer</span>
-          <span>CVPR 2026</span>
+          <span>CVPR 2026, ECCV 2026</span>
         </li>
       </ul>
     </section>
@@ -377,11 +377,11 @@
     // Render Experience
     function renderExperience() {
       const container = document.getElementById('experience-container');
-      
+
       experiences.forEach(exp => {
         const card = document.createElement('div');
         card.className = 'card experience-card';
-        
+
         card.innerHTML = `
           <img src="${exp.logo}" alt="${exp.id}" class="experience-logo">
           <div class="card-content">
@@ -395,7 +395,7 @@
             </div>
           </div>
         `;
-        
+
         container.appendChild(card);
       });
     }
@@ -413,12 +413,12 @@
     // Get the actual theme to apply (considering system preference)
     function getEffectiveTheme() {
       const savedTheme = localStorage.getItem('theme');
-      
+
       // If user has explicitly set a theme, use it
       if (savedTheme === 'light' || savedTheme === 'dark') {
         return savedTheme;
       }
-      
+
       // Otherwise, follow system preference
       return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
