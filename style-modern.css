@@ -93,8 +93,7 @@ section {
 
 .profile-image {
   width: 180px;
-  height: 180px;
-  object-fit: cover;
+  height: auto;
   border-radius: 8px;
   flex-shrink: 0;
 }
@@ -352,7 +351,7 @@ footer {
 
   .profile-image {
     width: 150px;
-    height: 150px;
+    height: auto;
   }
 
   .exp-header {
