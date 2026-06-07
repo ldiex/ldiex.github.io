@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -76,10 +76,8 @@
     <section>
       <h2 class="section-title">Publications</h2>
       <p style="margin-bottom: 20px; color: var(--text-secondary); font-size: 0.9rem;">
-        * Denotes Equal Contribution. First-author and co-first-author papers are <span
-          style="color: var(--accent-color); font-weight: 600;">highlighted</span>.
+        * Denotes Equal Contribution.
       </p>
-
       <div class="card-grid" id="publications-container">
         <!-- Publications will be dynamically rendered here -->
       </div>
@@ -352,9 +350,11 @@
     function renderPublications() {
       const container = document.getElementById('publications-container');
 
-      publications.forEach(pub => {
+      const sorted = [...publications].sort((a, b) => (b.highlighted ? 1 : 0) - (a.highlighted ? 1 : 0));
+
+      sorted.forEach(pub => {
         const article = document.createElement('article');
-        article.className = pub.highlighted ? 'card highlighted' : 'card';
+        article.className = 'card';
 
         // Render authors
         const authorsHTML = pub.authors.map(author => {
@@ -434,7 +434,7 @@
       }
 
       // Otherwise, follow system preference
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      return 'dark';
     }
 
     // Apply theme to the document

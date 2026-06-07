@@ -179,9 +179,6 @@ section {
   background: var(--surface);
 }
 
-.card.highlighted {
-  border-color: var(--accent-color);
-}
 
 .card-content {
   display: flex;
