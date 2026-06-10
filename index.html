@@ -75,11 +75,16 @@
     <!-- Publications Section -->
     <section>
       <h2 class="section-title">Publications</h2>
-      <p style="margin-bottom: 20px; color: var(--text-secondary); font-size: 0.9rem;">
-        * Denotes Equal Contribution.
-      </p>
-      <div class="card-grid" id="publications-container">
-        <!-- Publications will be dynamically rendered here -->
+      <div style="margin-bottom: 20px;">
+        <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Selected Publications</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">
+          * Denotes Equal Contribution.
+        </p>
+        <div class="card-grid" id="selected-publications-container"></div>
+      </div>
+      <div style="margin-top: 24px;">
+        <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Other Publications</h3>
+        <div class="card-grid" id="other-publications-container"></div>
       </div>
     </section>
 
@@ -348,15 +353,13 @@
 
     // Render Publications
     function renderPublications() {
-      const container = document.getElementById('publications-container');
+      const selectedContainer = document.getElementById('selected-publications-container');
+      const otherContainer = document.getElementById('other-publications-container');
 
-      const sorted = [...publications].sort((a, b) => (b.highlighted ? 1 : 0) - (a.highlighted ? 1 : 0));
-
-      sorted.forEach(pub => {
+      publications.forEach(pub => {
         const article = document.createElement('article');
         article.className = 'card';
 
-        // Render authors
         const authorsHTML = pub.authors.map(author => {
           if (author.isSelf) {
             return `<strong>${author.name}</strong>${author.equal ? '<sup>*</sup>' : ''}`;
@@ -367,7 +370,6 @@
           }
         }).join(',\n              ');
 
-        // Render links
         const linksHTML = pub.links.map(link =>
           `<a href="${link.url}" class="pub-link">${link.text}</a>`
         ).join(' / ');
@@ -386,7 +388,11 @@
           </div>
         `;
 
-        container.appendChild(article);
+        if (pub.highlighted) {
+          selectedContainer.appendChild(article);
+        } else {
+          otherContainer.appendChild(article);
+        }
       });
     }
 
