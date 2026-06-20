@@ -135,6 +135,34 @@ section {
   border-bottom: 1px solid var(--border-color);
 }
 
+.subsection {
+  margin-bottom: 20px;
+}
+
+.subsection + .subsection {
+  margin-top: 24px;
+}
+
+.subsection-title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.equal-contribution-note {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.text-secondary-sm {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.services-date {
+  min-width: 150px;
+}
+
 .news-list {
   list-style: none;
 }
@@ -178,7 +206,6 @@ section {
   padding: 20px;
   background: var(--surface);
 }
-
 
 .card-content {
   display: flex;
@@ -235,29 +262,10 @@ section {
   color: var(--accent-color);
 }
 
-.card-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 4px;
-}
-
-.card-links .link-btn {
-  padding: 6px 12px;
-  font-size: 13px;
-}
-
 .experience-card {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-}
-
-.experience-logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  flex-shrink: 0;
 }
 
 .exp-header {

@@ -8,24 +8,14 @@
   <meta name="author" content="Tianlin Pan">
   <meta name="description" content="Tianlin Pan's personal academic website">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
-
-  <!-- Icons -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style-modern.css">
 </head>
 
 <body>
 
-  <!-- Theme Switcher -->
   <div class="theme-switcher">
     <button class="theme-btn" data-theme="light" title="Light Mode" aria-label="Switch to light mode">
       <i class="fa-solid fa-sun"></i>
@@ -37,16 +27,15 @@
 
   <div class="container">
 
-    <!-- Profile Section -->
     <header class="profile-section">
       <div class="profile-info">
         <h1>Tianlin Pan</h1>
         <div class="profile-bio">
-          <p style="margin-bottom: 1.5rem;">
+          <p>
             Bachelor Student, <a href="https://www.ucas.ac.cn/">University of Chinese Academy of Sciences</a>
           </p>
-          <p style="margin-bottom: 0.5rem;">
-            Currently: <a href="https://kling.ai/">Kling Image, Kuaishou Technology</a>
+          <p>
+            Currently: <a href="https://kling.ai/">Kling Image, Kuaishou technology</a>
           </p>
           <p>
             Previously: <a href="https://github.com/WeChatCV">WeChat Vision</a>, <a href="https://prlab-nju.com/">PRLab@NJU</a>, <a href="https://www.mmlab-ntu.com/index.html">MMLab@NTU</a>
@@ -69,26 +58,22 @@
         </div>
       </div>
 
-      <img src="images/photo.jpg" alt="Tianlin Pan" class="profile-image">
+      <img src="images/photo.jpg" alt="Tianlin Pan" class="profile-image" loading="lazy">
     </header>
 
-    <!-- Publications Section -->
     <section>
       <h2 class="section-title">Publications</h2>
-      <div style="margin-bottom: 20px;">
-        <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Selected Publications</h3>
-        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">
-          * Denotes Equal Contribution.
-        </p>
+      <div class="subsection">
+        <h3 class="subsection-title">Selected Publications</h3>
+        <p class="equal-contribution-note">* Denotes Equal Contribution.</p>
         <div class="card-grid" id="selected-publications-container"></div>
       </div>
-      <div style="margin-top: 24px;">
-        <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Other Publications</h3>
+      <div class="subsection">
+        <h3 class="subsection-title">Other Publications</h3>
         <div class="card-grid" id="other-publications-container"></div>
       </div>
     </section>
 
-    <!-- Education Section -->
     <section>
       <h2 class="section-title">Education</h2>
       <div class="card-grid">
@@ -99,7 +84,7 @@
               <span class="exp-date">2023 - 2027 (Expected)</span>
             </div>
             <div class="exp-role">B.E. in Artificial Intelligence</div>
-            <div style="color: var(--text-secondary); font-size: 0.9rem;">
+            <div class="text-secondary-sm">
               Beijing, China | GPA: 3.95/4.00, Rank: 3/85
             </div>
           </div>
@@ -107,52 +92,19 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
     <section>
       <h2 class="section-title">Experience</h2>
-      <div class="card-grid" id="experience-container">
-        <!-- Experience items will be dynamically rendered here -->
-      </div>
+      <div class="card-grid" id="experience-container"></div>
     </section>
 
-
-    <!-- Awards and Honors Section -->
     <section class="awards-section">
       <h2 class="section-title">Awards and Honors</h2>
-      <ul class="news-list">
-        <li class="news-item">
-          <span class="news-date">2026</span>
-          <span><em><strong>SenseTime Scholarship</strong></em> (Top 30 students across China)</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2025</span>
-          <span><em><strong>National Scholarship</strong></em>, Ministry of Education, China</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2025</span>
-          <span><em>Undergraduate "Qiyan" Program Grant</em>, Project Leader, Funded by Beijing Natural Science
-            Foundation</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">2025</span>
-          <span><em>First-Level Scholarship</em> (Top 5%), University of Chinese Academy of Sciences</span>
-        </li>
-      </ul>
+      <ul class="news-list" id="awards-container"></ul>
     </section>
 
-    <!-- Services Section -->
     <section class="services-section">
       <h2 class="section-title">Services</h2>
-      <ul class="news-list">
-        <li class="news-item">
-          <span class="news-date" style="min-width: 150px;">Teaching Assistant</span>
-          <span><em>Introduction to Computer Sciences</em>, 25 Spring, UCAS</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date" style="min-width: 150px;">Reviewer</span>
-          <span>CVPR 2026, ECCV 2026</span>
-        </li>
-      </ul>
+      <ul class="news-list" id="services-container"></ul>
     </section>
 
     <footer>
@@ -161,329 +113,8 @@
 
   </div>
 
-  <script>
-    // Publications Data
-    const publications = [
-      {
-        id: 'normguard',
-        title: 'NormGuard: Reward-Preserving Norm Constraints in Flow-Matching Reinforcement Learning',
-        image: 'images/rewardpreserving.png',
-        authors: [
-          { name: 'Tianlin Pan', isSelf: true, equal: true },
-          { name: 'Lianyu Pang', url: 'https://scholar.google.com/citations?user=Ld-2assAAAAJ&hl=en', equal: true },
-          { name: 'Cheng Da', url: 'https://scholar.google.com/citations?hl=en&user=A1FqXioAAAAJ' },
-          { name: 'Huan Yang', url: 'https://hyang0511.github.io/' },
-          { name: 'Changqian Yu', url: 'https://yu-changqian.github.io/' },
-          { name: 'Kun Gai', url: 'https://scholar.google.com/citations?user=PXO4ygEAAAAJ&hl=zh-CN' },
-          { name: 'Wenhan Luo', url: 'https://whluo.github.io/' }
-        ],
-        venue: 'arXiv Preprint, 2026',
-        links: [
-          { type: 'coming', url: '#', icon: 'fa-solid fa-clock', text: 'Coming Soon' }
-        ],
-        highlighted: true
-      },
-      {
-        id: 'maskalign',
-        title: 'MaskAlign: Token-Subset Representation Alignment for Efficient Diffusion Training',
-        image: 'images/maskalign.png',
-        authors: [
-          { name: 'Lianyu Pang', url: 'https://scholar.google.com/citations?user=Ld-2assAAAAJ&hl=en', equal: true },
-          { name: 'Tianlin Pan', isSelf: true, equal: true },
-          { name: 'Cheng Da', url: 'https://scholar.google.com/citations?hl=en&user=A1FqXioAAAAJ' },
-          { name: 'Changqian Yu', url: 'https://yu-changqian.github.io/' },
-          { name: 'Huan Yang', url: 'https://hyang0511.github.io/' },
-          { name: 'Kun Gai', url: 'https://scholar.google.com/citations?user=PXO4ygEAAAAJ&hl=zh-CN' },
-          { name: 'Song Guo', url: 'https://cse.hkust.edu.hk/~songguo/' },
-          { name: 'Wenhan Luo', url: 'https://whluo.github.io/' }
-        ],
-        venue: 'arXiv Preprint, 2026',
-        links: [
-          { type: 'arxiv', url: 'https://arxiv.org/abs/2606.08788', icon: 'fa-solid fa-file-lines', text: 'Paper' }
-        ],
-        highlighted: true
-      },
-      {
-        id: 'nova',
-        title: 'NOVA: Sparse Control, Dense Synthesis for Pair-Free Video Editing',
-        image: 'images/nova.png',
-        authors: [
-          { name: 'Tianlin Pan', isSelf: true },
-          { name: 'Jiayi Dai', url: 'https://openreview.net/profile?id=~Jiayi_Dai5' },
-          { name: 'Chenpu Yuan', url: 'https://openreview.net/profile?id=~Chenpu_Yuan2' },
-          { name: 'Zhengyao Lv', url: 'https://scholar.google.com/citations?user=FkkaUgwAAAAJ&hl=en' },
-          { name: 'Binxin Yang', url: 'https://binxinyang.github.io/' },
-          { name: 'Hubery Yin', url: 'https://openreview.net/profile?id=~Hubery_Yin1' },
-          { name: 'Chen Li', url: 'https://scholar.google.com/citations?user=WDJL3gYAAAAJ&hl=zh-CN' },
-          { name: 'Jing Lyu', url: 'https://openreview.net/profile?id=~Jing_LYU2' },
-          { name: 'Caifeng Shan', url: 'https://caifeng-shan.github.io/' },
-          { name: 'Chenyang Si', url: 'https://chenyangsi.top/' }
-        ],
-        venue: 'CVPR 2026',
-        links: [
-          { type: 'arxiv', url: 'https://arxiv.org/abs/2603.02802', icon: 'fa-solid fa-file-pdf', text: 'Paper' },
-          { type: 'code', url: 'https://github.com/WeChatCV/NovaEdit', icon: 'fa-brands fa-github', text: 'Code' }
-        ],
-        highlighted: true
-      },
-      {
-        id: 'stableworld',
-        title: 'StableWorld: Towards Stable and Consistent Long Interactive Video Generation',
-        image: 'images/stableworld.png',
-        authors: [
-          { name: 'Ying Yang', url: 'https://github.com/xbyym' },
-          { name: 'Zhengyao Lv', url: 'https://scholar.google.com/citations?user=FkkaUgwAAAAJ&hl=en' },
-          { name: 'Tianlin Pan', isSelf: true },
-          { name: 'Haofan Wang', url: 'https://haofanwang.github.io/' },
-          { name: 'Binxin Yang', url: 'https://binxinyang.github.io/' },
-          { name: 'Hubery Yin', url: 'https://openreview.net/profile?id=~Hubery_Yin1' },
-          { name: 'Chen Li', url: 'https://scholar.google.com/citations?user=WDJL3gYAAAAJ&hl=zh-CN' },
-          { name: 'Ziwei Liu', url: 'https://liuziwei7.github.io/' },
-          { name: 'Chenyang Si', url: 'https://chenyangsi.top/' }
-        ],
-        venue: 'arXiv Preprint, 2026',
-        links: [
-          { type: 'project', url: 'https://sd-world.github.io/', icon: 'fa-solid fa-globe', text: 'Project' },
-          { type: 'arxiv', url: 'https://arxiv.org/abs/2601.15281', icon: 'fa-solid fa-file-pdf', text: 'Paper' },
-          { type: 'code', url: 'https://github.com/xbyym/StableWorld', icon: 'fa-brands fa-github', text: 'Code' }
-        ],
-        highlighted: false
-      },
-      {
-        id: 'diversear',
-        title: 'Boosting Diversity in Bitwise Autoregressive Image Generation',
-        image: 'images/diverse_ar.png',
-        authors: [
-          { name: 'Ying Yang', url: 'https://openreview.net/profile?id=%7EYing_Yang2', equal: true },
-          { name: 'Zhengyao Lv', url: 'https://scholar.google.com/citations?user=FkkaUgwAAAAJ&hl=en', equal: true },
-          { name: 'Tianlin Pan', isSelf: true },
-          { name: 'Haofan Wang', url: 'https://haofanwang.github.io/' },
-          { name: 'Binxing Yang', url: 'https://binxinyang.github.io/' },
-          { name: 'Hubery Yin', url: 'https://openreview.net/profile?id=~Hubery_Yin1' },
-          { name: 'Chen Li', url: 'https://scholar.google.com/citations?user=WDJL3gYAAAAJ&hl=zh-CN' },
-          { name: 'Chenyang Si', url: 'https://chenyangsi.github.io/' }
-        ],
-        venue: 'CVPR 2026 Findings',
-        links: [
-          { type: 'project', url: 'https://diverse-ar.github.io/', icon: 'fa-solid fa-globe', text: 'Project' },
-          { type: 'arxiv', url: 'https://arxiv.org/abs/2512.02931', icon: 'fa-solid fa-file-pdf', text: 'Paper' },
-          { type: 'code', url: 'https://github.com/xbyym/DiverseAR', icon: 'fa-brands fa-github', text: 'Code' }
-        ],
-        highlighted: false
-      },
-      {
-        id: 'taca',
-        title: 'Rethinking Cross-Modal Interaction in Multimodal Diffusion Transformers',
-        image: 'images/taca.png',
-        authors: [
-          { name: 'Zhengyao Lv', url: 'https://scholar.google.com/citations?user=FkkaUgwAAAAJ&hl=en', equal: true },
-          { name: 'Tianlin Pan', isSelf: true, equal: true },
-          { name: 'Chenyang Si', url: 'https://chenyangsi.github.io/' },
-          { name: 'Zhaoxi Chen', url: 'https://frozenburning.github.io/' },
-          { name: 'Wangmeng Zuo', url: 'https://homepage.hit.edu.cn/wangmengzuo' },
-          { name: 'Ziwei Liu', url: 'https://liuziwei7.github.io/' },
-          { name: 'Kwan-Yee K. Wong', url: 'https://i.cs.hku.hk/~kykwong/' }
-        ],
-        venue: 'ICCV 2025',
-        links: [
-          { type: 'project', url: 'https://vchitect.github.io/TACA/', icon: 'fa-solid fa-globe', text: 'Project' },
-          { type: 'arxiv', url: 'https://arxiv.org/abs/2506.07986', icon: 'fa-solid fa-file-pdf', text: 'Paper' },
-          { type: 'code', url: 'https://github.com/Vchitect/TACA', icon: 'fa-brands fa-github', text: 'Code' }
-        ],
-        highlighted: true
-      },
-      {
-        id: 'dcm',
-        title: 'Dual-Expert Consistency Model for Efficient and High-Quality Video Generation',
-        image: 'images/dcm.jpg',
-        authors: [
-          { name: 'Zhengyao Lv', url: 'https://scholar.google.com/citations?user=FkkaUgwAAAAJ&hl=en', equal: true },
-          { name: 'Chenyang Si', url: 'https://chenyangsi.github.io/', equal: true },
-          { name: 'Tianlin Pan', isSelf: true },
-          { name: 'Zhaoxi Chen', url: 'https://frozenburning.github.io/' },
-          { name: 'Kwan-Yee K. Wong', url: 'https://i.cs.hku.hk/~kykwong/' },
-          { name: 'Yu Qiao', url: 'https://mmlab.siat.ac.cn/yuqiao' },
-          { name: 'Ziwei Liu', url: 'https://liuziwei7.github.io/' }
-        ],
-        venue: 'ICCV 2025',
-        links: [
-          { type: 'project', url: 'https://vchitect.github.io/DCM/', icon: 'fa-solid fa-globe', text: 'Project' },
-          { type: 'arxiv', url: 'https://arxiv.org/abs/2506.03123', icon: 'fa-solid fa-file-pdf', text: 'Paper' },
-          { type: 'code', url: 'https://github.com/Vchitect/DCM', icon: 'fa-brands fa-github', text: 'Code' }
-        ],
-        highlighted: false
-      }
-    ];
-
-    // Experience Data
-    const experiences = [
-      {
-        id: 'kling',
-        logo: 'images/logos/kling.png',
-        organization: 'Kling AI, Kuaishou Technology',
-        role: '',
-        date: '2026.03 - Present',
-        location: 'Beijing, China',
-        description: 'Advised by <a href="https://scholar.google.com/citations?hl=en&user=A1FqXioAAAAJ">Cheng Da</a>, <a href="https://hyang0511.github.io/">Huan Yang</a> and <a href="https://yu-changqian.github.io/">Changqian Yu</a>'
-      },
-      {
-        id: 'tencent',
-        logo: 'images/logos/tencent.png',
-        organization: 'WeChat, Tencent Inc.',
-        role: '',
-        date: '2025.08 - 2026.03',
-        location: 'Beijing, China',
-        description: 'Advised by <a href="https://binxinyang.github.io/">Binxin Yang</a> and <a href="https://scholar.google.com/citations?user=WDJL3gYAAAAJ&hl=zh-CN">Chen Li</a>'
-      },
-      {
-        id: 'nju',
-        logo: 'images/logos/nju.svg',
-        organization: 'PRLab@Nanjing University',
-        role: '',
-        date: '2025.03 - 2026.03',
-        location: 'Suzhou, China (Remote)',
-        description: 'Advised by <a href="https://chenyangsi.top/">Chenyang Si</a>'
-      },
-      {
-        id: 'ntu',
-        logo: 'images/logos/ntu.png',
-        organization: 'MMLab@Nanyang Technological University',
-        role: '',
-        date: '2024.11 - 2025.03',
-        location: 'Singapore (Remote)',
-        description: 'Advised by <a href="https://chenyangsi.top/">Chenyang Si</a> and <a href="https://liuziwei7.github.io/">Ziwei Liu</a>'
-      }
-    ];
-
-    // Render Publications
-    function renderPublications() {
-      const selectedContainer = document.getElementById('selected-publications-container');
-      const otherContainer = document.getElementById('other-publications-container');
-
-      publications.forEach(pub => {
-        const article = document.createElement('article');
-        article.className = 'card';
-
-        const authorsHTML = pub.authors.map(author => {
-          if (author.isSelf) {
-            return `<strong>${author.name}</strong>${author.equal ? '<sup>*</sup>' : ''}`;
-          } else if (author.url) {
-            return `<a href="${author.url}">${author.name}</a>${author.equal ? '<sup>*</sup>' : ''}`;
-          } else {
-            return `${author.name}${author.equal ? '<sup>*</sup>' : ''}`;
-          }
-        }).join(',\n              ');
-
-        const linksHTML = pub.links.map(link =>
-          `<a href="${link.url}" class="pub-link">${link.text}</a>`
-        ).join(' / ');
-
-        article.innerHTML = `
-          <div class="card-content">
-            <h3 class="card-title">
-              <a href="${pub.links[0].url}">${pub.title}</a>
-            </h3>
-            <div class="card-authors">
-              ${authorsHTML}
-            </div>
-            <div class="card-venue">
-              ${pub.venue} / ${linksHTML}
-            </div>
-          </div>
-        `;
-
-        if (pub.highlighted) {
-          selectedContainer.appendChild(article);
-        } else {
-          otherContainer.appendChild(article);
-        }
-      });
-    }
-
-    // Render Experience
-    function renderExperience() {
-      const container = document.getElementById('experience-container');
-
-      experiences.forEach(exp => {
-        const card = document.createElement('div');
-        card.className = 'card experience-card';
-
-        card.innerHTML = `
-          <div class="card-content">
-            <div class="exp-header">
-              <h3>${exp.organization}</h3>
-              <span class="exp-date">${exp.date}</span>
-            </div>
-            <div style="color: var(--text-secondary); font-size: 0.9rem;">
-              ${exp.location} | ${exp.description}
-            </div>
-          </div>
-        `;
-
-        container.appendChild(card);
-      });
-    }
-
-    // Initialize on page load
-    document.addEventListener('DOMContentLoaded', () => {
-      renderPublications();
-      renderExperience();
-    });
-
-    // Theme switcher functionality
-    const themeButtons = document.querySelectorAll('.theme-btn');
-    const html = document.documentElement;
-
-    // Get the actual theme to apply (considering system preference)
-    function getEffectiveTheme() {
-      const savedTheme = localStorage.getItem('theme');
-
-      // If user has explicitly set a theme, use it
-      if (savedTheme === 'light' || savedTheme === 'dark') {
-        return savedTheme;
-      }
-
-      // Otherwise, follow system preference
-      return 'dark';
-    }
-
-    // Apply theme to the document
-    function applyTheme(theme) {
-      html.setAttribute('data-theme', theme);
-    }
-
-    // Update active button state based on current effective theme
-    function updateActiveButton() {
-      const effectiveTheme = getEffectiveTheme();
-      themeButtons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.theme === effectiveTheme);
-      });
-    }
-
-    // Initialize theme on page load
-    applyTheme(getEffectiveTheme());
-    updateActiveButton();
-
-    // Handle theme button clicks
-    themeButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const theme = btn.dataset.theme;
-        localStorage.setItem('theme', theme);
-        applyTheme(theme);
-        updateActiveButton();
-      });
-    });
-
-    // Listen for system theme changes (when user hasn't set an explicit preference)
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      const savedTheme = localStorage.getItem('theme');
-      // Only respond to system changes if user hasn't explicitly set a theme
-      if (!savedTheme || (savedTheme !== 'light' && savedTheme !== 'dark')) {
-        applyTheme(getEffectiveTheme());
-        updateActiveButton();
-      }
-    });
-  </script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
 
 </body>
 
