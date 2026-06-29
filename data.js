@@ -14,7 +14,7 @@ const publications = [
     ],
     venue: 'arXiv Preprint, 2026',
     links: [
-      { type: 'coming', url: '#', icon: 'fa-solid fa-clock', text: 'Coming Soon' }
+      { type: 'arxiv', url: 'https://arxiv.org/abs/2606.27771', icon: 'fa-solid fa-file-lines', text: 'Paper' }
     ],
     highlighted: true
   },
