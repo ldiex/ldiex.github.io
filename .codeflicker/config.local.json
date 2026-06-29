@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Fetch(domain:mikastars39.site)",
-      "Bash(find:*)"
-    ]
-  }
-}
