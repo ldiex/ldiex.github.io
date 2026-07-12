@@ -192,7 +192,7 @@ function initNavHighlighting() {
       }
     });
   }, {
-    rootMargin: '-52px 0px -40% 0px',
+    rootMargin: '-52px 0px -90% 0px',
     threshold: 0
   });
 
