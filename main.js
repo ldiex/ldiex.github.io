@@ -140,10 +140,50 @@ function initTheme() {
   });
 }
 
+function initNavHighlighting() {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = ['publications', 'education', 'experience', 'awards', 'services']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+
+  if (!('IntersectionObserver' in window) || sections.length === 0) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.dataset.target === id);
+        });
+      }
+    });
+  }, {
+    rootMargin: '-52px 0px -40% 0px',
+    threshold: 0
+  });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+function initNavSmoothScroll() {
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.dataset.target;
+      const target = document.getElementById(targetId);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', '#' + targetId);
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderPublications();
   renderExperience();
   renderAwards();
   renderServices();
   initTheme();
+  initNavHighlighting();
+  initNavSmoothScroll();
 });
