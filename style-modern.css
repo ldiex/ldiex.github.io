@@ -98,6 +98,11 @@ section {
   flex-shrink: 0;
 }
 
+.research-statement {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
 .social-links {
   display: flex;
   flex-wrap: wrap;
