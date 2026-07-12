@@ -364,6 +364,7 @@ footer {
 .nav-link.active {
   color: var(--accent-color);
   background: var(--surface-alt);
+  font-weight: 700;
 }
 
 .theme-switcher {
