@@ -105,7 +105,7 @@ function initTheme() {
     if (savedTheme === 'light' || savedTheme === 'dark') {
       return savedTheme;
     }
-    return 'dark';
+    return 'light';
   }
 
   function applyTheme(theme) {
