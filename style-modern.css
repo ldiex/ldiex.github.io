@@ -156,7 +156,7 @@ section {
 
 .text-secondary-sm {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 14.5px;
 }
 
 .services-date {
@@ -180,13 +180,13 @@ section {
 
 .news-date {
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 14.5px;
   white-space: nowrap;
 }
 
 .news-item span:last-child {
   color: var(--text-primary);
-  font-size: 14px;
+  font-size: 14.5px;
 }
 
 .news-item strong {
