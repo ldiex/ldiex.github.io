@@ -1,3 +1,9 @@
+const NAV_SECTION_IDS = ['publications', 'education', 'experience', 'awards', 'services'];
+
+/* ============================================
+ * Data Rendering
+ * ============================================ */
+
 function renderPublications() {
   const selectedContainer = document.getElementById('selected-publications-container');
   const otherContainer = document.getElementById('other-publications-container');
@@ -39,6 +45,30 @@ function renderPublications() {
     } else {
       otherContainer.appendChild(article);
     }
+  });
+}
+
+function renderEducation() {
+  const container = document.getElementById('education-container');
+
+  education.forEach(edu => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    card.innerHTML = `
+      <div class="card-content">
+        <div class="exp-header">
+          <h3>${edu.school}</h3>
+          <span class="exp-date">${edu.date}</span>
+        </div>
+        <div class="exp-role">${edu.degree}</div>
+        <div class="text-secondary-sm">
+          ${edu.location} | ${edu.detail}
+        </div>
+      </div>
+    `;
+
+    container.appendChild(card);
   });
 }
 
@@ -96,6 +126,10 @@ function renderServices() {
   });
 }
 
+/* ============================================
+ * UI Initialization
+ * ============================================ */
+
 function initTheme() {
   const themeButtons = document.querySelectorAll('.theme-btn');
   const html = document.documentElement;
@@ -142,7 +176,7 @@ function initTheme() {
 
 function initNavHighlighting() {
   const navLinks = document.querySelectorAll('.nav-link');
-  const sections = ['publications', 'education', 'experience', 'awards', 'services']
+  const sections = NAV_SECTION_IDS
     .map(id => document.getElementById(id))
     .filter(Boolean);
 
@@ -178,8 +212,13 @@ function initNavSmoothScroll() {
   });
 }
 
+/* ============================================
+ * App Entry Point
+ * ============================================ */
+
 document.addEventListener('DOMContentLoaded', () => {
   renderPublications();
+  renderEducation();
   renderExperience();
   renderAwards();
   renderServices();

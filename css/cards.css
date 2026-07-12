@@ -1,0 +1,97 @@
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  background: var(--surface);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-title a {
+  color: var(--text-primary);
+}
+
+.card-title a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.card-authors {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.card-authors strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.card-authors a {
+  color: var(--text-secondary);
+}
+
+.card-authors a:hover {
+  color: var(--text-primary);
+}
+
+.card-venue {
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pub-link {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.pub-link:hover {
+  color: var(--accent-color);
+}
+
+.experience-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.exp-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.exp-date {
+  color: var(--text-tertiary);
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.exp-role {
+  color: var(--accent-color);
+  font-size: 14px;
+}

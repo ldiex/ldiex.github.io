@@ -189,6 +189,17 @@ const experiences = [
   }
 ];
 
+const education = [
+  {
+    id: 'ucas',
+    school: 'University of Chinese Academy of Sciences (UCAS)',
+    date: '2023 - 2027 (Expected)',
+    degree: 'B.E. in Artificial Intelligence',
+    location: 'Beijing, China',
+    detail: 'GPA: 3.95/4.00, Rank: 3/85'
+  }
+];
+
 const awards = [
   {
     year: '2026',

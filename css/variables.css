@@ -1,0 +1,23 @@
+:root {
+  --bg-color: #ffffff;
+  --surface: #ffffff;
+  --surface-alt: #f8f9fa;
+  --border-color: #e5e7eb;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --accent-color: #ea580c;
+  --accent-hover: #c2410c;
+}
+
+[data-theme="dark"] {
+  --bg-color: #111827;
+  --surface: #1f2937;
+  --surface-alt: #374151;
+  --border-color: #374151;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --accent-color: #f97316;
+  --accent-hover: #fb923c;
+}

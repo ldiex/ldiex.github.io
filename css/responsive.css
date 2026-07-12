@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 16px;
+  }
+
+  .profile-section {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-info {
+    width: 100%;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: auto;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .experience-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .news-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .nav-inner {
+    padding: 0 16px;
+  }
+
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
