@@ -38,6 +38,10 @@
   font-size: 14px;
 }
 
+.author-name {
+  white-space: nowrap;
+}
+
 .card-authors strong {
   color: var(--accent-color);
   font-weight: 600;

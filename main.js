@@ -13,29 +13,34 @@ function renderPublications() {
     article.className = 'card';
 
     const authorsHTML = pub.authors.map(author => {
-      if (author.isSelf) {
-        return `<strong>${author.name}</strong>${author.equal ? '<sup>*</sup>' : ''}`;
-      } else if (author.url) {
-        return `<a href="${author.url}">${author.name}</a>${author.equal ? '<sup>*</sup>' : ''}`;
-      } else {
-        return `${author.name}${author.equal ? '<sup>*</sup>' : ''}`;
-      }
+      const nameHTML = author.isSelf
+        ? `<strong>${author.name}</strong>`
+        : author.url
+          ? `<a href="${author.url}">${author.name}</a>`
+          : author.name;
+      const equalMark = author.equal ? '<sup>*</sup>' : '';
+      return `<span class="author-name">${nameHTML}${equalMark}</span>`;
     }).join(', ');
 
     const linksHTML = pub.links.map(link =>
       `<a href="${link.url}" class="pub-link">${link.text}</a>`
     ).join(' / ');
 
+    const titleHTML = pub.links.length > 0
+      ? `<a href="${pub.links[0].url}">${pub.title}</a>`
+      : pub.title;
+    const venueHTML = linksHTML ? `${pub.venue} / ${linksHTML}` : pub.venue;
+
     article.innerHTML = `
       <div class="card-content">
         <h3 class="card-title">
-          <a href="${pub.links[0].url}">${pub.title}</a>
+          ${titleHTML}
         </h3>
         <div class="card-authors">
           ${authorsHTML}
         </div>
         <div class="card-venue">
-          ${pub.venue} / ${linksHTML}
+          ${venueHTML}
         </div>
       </div>
     `;

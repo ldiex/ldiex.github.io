@@ -85,6 +85,28 @@ const publications = [
     highlighted: false
   },
   {
+    id: 'multiworld',
+    title: 'MultiWorld: A Multi-View World Model with Spatiotemporally Synchronized Interaction',
+    image: '',
+    authors: [
+      { name: 'Jiayi Dai' },
+      { name: 'Zhengyao Lv' },
+      { name: 'Chenpu Yuan' },
+      { name: 'Xiansong Song' },
+      { name: 'Haofan Wang' },
+      { name: 'Tianlin Pan', isSelf: true },
+      { name: 'Yueming Lyu' },
+      { name: 'Youjin Lee' },
+      { name: 'Jaeyun Jeong' },
+      { name: 'Zikun Liu' },
+      { name: 'Liang Wang' },
+      { name: 'Chenyang Si' }
+    ],
+    venue: 'ACMMM 2026',
+    links: [],
+    highlighted: false
+  },
+  {
     id: 'diversear',
     title: 'Boosting Diversity in Bitwise Autoregressive Image Generation',
     image: 'images/diverse_ar.png',
