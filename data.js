@@ -176,7 +176,7 @@ const experiences = [
   {
     id: 'kling',
     logo: 'images/logos/kling.png',
-    organization: 'Kling AI, Kuaishou Technology',
+    organization: 'KlingAI Research',
     role: '',
     date: '2026.03 - Present',
     location: 'Beijing, China',
