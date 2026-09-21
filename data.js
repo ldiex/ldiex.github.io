@@ -256,6 +256,6 @@ const services = [
   },
   {
     role: 'Reviewer',
-    detail: 'CVPR 2026, ECCV 2026'
+    detail: 'CVPR 2026; ECCV 2026; ICLR 2026, 2027'
   }
 ];
