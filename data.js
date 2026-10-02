@@ -1,5 +1,22 @@
 const publications = [
   {
+    id: 'cotraining',
+    title: 'When Co-Training Becomes Redundant: Update Geometry in Unified Multimodal Reinforcement Learning',
+    image: '',
+    authors: [
+      { name: 'Tianlin Pan', isSelf: true },
+      { name: 'Lianyu Pang', url: 'https://scholar.google.com/citations?user=Ld-2assAAAAJ&hl=en' },
+      { name: 'Bo Yang', url: 'https://borisyang326.github.io/' },
+      { name: 'Cheng Da', url: 'https://scholar.google.com/citations?hl=en&user=A1FqXioAAAAJ' },
+      { name: 'Changqian Yu', url: 'https://yu-changqian.github.io/' },
+      { name: 'Kun Gai', url: 'https://scholar.google.com/citations?user=PXO4ygEAAAAJ&hl=zh-CN' },
+      { name: 'Wenhan Luo', url: 'https://whluo.github.io/' }
+    ],
+    venue: 'Coming Soon, 2026',
+    links: [],
+    highlighted: false
+  },
+  {
     id: 'normguard',
     title: 'NormGuard: Reward-Preserving Norm Constraints in Flow-Matching Reinforcement Learning',
     image: 'images/rewardpreserving.png',
@@ -36,7 +53,7 @@ const publications = [
     links: [
       { type: 'arxiv', url: 'https://arxiv.org/abs/2606.08788', icon: 'fa-solid fa-file-lines', text: 'Paper' }
     ],
-    highlighted: true
+    highlighted: false
   },
   {
     id: 'nova',
@@ -213,12 +230,20 @@ const experiences = [
 
 const education = [
   {
+    id: 'hkust',
+    school: 'The Hong Kong University of Science and Technology (HKUST)',
+    date: '2027 - 2031 (Expected)',
+    degree: 'Ph.D. in Electrical and Computer Engineering',
+    location: 'Hong Kong, China',
+    detail: 'Advised by <a href="https://whluo.github.io/">Wenhan Luo</a> (main) and <a href="https://ling-pan.github.io/">Ling Pan</a> (co-)'
+  },
+  {
     id: 'ucas',
     school: 'University of Chinese Academy of Sciences (UCAS)',
     date: '2023 - 2027 (Expected)',
     degree: 'B.E. in Artificial Intelligence',
     location: 'Beijing, China',
-    detail: 'GPA: 3.95/4.00, Rank: 3/85'
+    detail: 'GPA: 3.94/4.00'
   }
 ];
 
