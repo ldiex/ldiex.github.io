@@ -20,9 +20,10 @@ section {
 }
 
 .profile-info h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  line-height: 1.2;
+  margin-bottom: 12px;
 }
 
 .profile-bio {
@@ -31,7 +32,12 @@ section {
 }
 
 .profile-bio p {
-  margin-bottom: 12px;
+  margin-bottom: 6px;
+}
+
+.profile-bio .profile-history {
+  font-size: 0.9rem;
+  margin-top: 10px;
 }
 
 .profile-bio p:last-child {
@@ -46,8 +52,13 @@ section {
 }
 
 .research-statement {
-  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.5;
   margin-bottom: 20px;
+}
+
+.research-statement strong {
+  font-weight: 600;
 }
 
 .social-links {
@@ -147,4 +158,3 @@ footer {
   height: 20px;
   width: auto;
 }
-
