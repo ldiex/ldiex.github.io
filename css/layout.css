@@ -20,7 +20,7 @@ section {
 }
 
 .profile-info h1 {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 12px;
@@ -53,12 +53,9 @@ section {
 
 .research-statement {
   font-size: 1.125rem;
+  font-style: italic;
   line-height: 1.5;
   margin-bottom: 20px;
-}
-
-.research-statement strong {
-  font-weight: 600;
 }
 
 .social-links {
@@ -91,7 +88,7 @@ section {
 }
 
 .section-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 20px;
   padding-bottom: 8px;
