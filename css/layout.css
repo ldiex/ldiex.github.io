@@ -49,6 +49,7 @@ section {
   height: auto;
   border-radius: 8px;
   flex-shrink: 0;
+  transform: translateX(-32px);
 }
 
 .research-statement {
