@@ -91,7 +91,7 @@ function renderExperience() {
           <span class="exp-date">${exp.date}</span>
         </div>
         <div class="text-secondary-sm">
-          ${exp.location} | ${exp.description}
+          ${[exp.direction, exp.description].filter(Boolean).join(' | ')}
         </div>
       </div>
     `;

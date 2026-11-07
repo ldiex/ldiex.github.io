@@ -191,12 +191,18 @@ const publications = [
 
 const experiences = [
   {
+    id: 'dreamx',
+    organization: 'DreamX Team, AMAP, Alibaba Group',
+    date: '2026.11 - Present',
+    direction: 'Video World Model'
+  },
+  {
     id: 'kling',
     logo: 'images/logos/kling.png',
     organization: 'KlingAI Research',
     role: '',
-    date: '2026.03 - Present',
-    location: 'Beijing, China',
+    date: '2026.03 - 2026.10',
+    direction: 'Reinforcement Learning; Unified Models',
     description: 'Advised by <a href="https://scholar.google.com/citations?hl=en&user=A1FqXioAAAAJ">Cheng Da</a>, <a href="https://hyang0511.github.io/">Huan Yang</a> and <a href="https://yu-changqian.github.io/">Changqian Yu</a>'
   },
   {
@@ -205,7 +211,7 @@ const experiences = [
     organization: 'WeChat, Tencent Inc.',
     role: '',
     date: '2025.08 - 2026.03',
-    location: 'Beijing, China',
+    direction: 'Video Editing Models',
     description: 'Advised by <a href="https://binxinyang.github.io/">Binxin Yang</a> and <a href="https://scholar.google.com/citations?user=WDJL3gYAAAAJ&hl=zh-CN">Chen Li</a>'
   },
   {
@@ -214,7 +220,6 @@ const experiences = [
     organization: 'PRLab@Nanjing University',
     role: '',
     date: '2025.03 - 2026.03',
-    location: 'Suzhou, China (Remote)',
     description: 'Advised by <a href="https://chenyangsi.top/">Chenyang Si</a>'
   },
   {
@@ -223,7 +228,6 @@ const experiences = [
     organization: 'MMLab@Nanyang Technological University',
     role: '',
     date: '2024.11 - 2025.03',
-    location: 'Singapore (Remote)',
     description: 'Advised by <a href="https://chenyangsi.top/">Chenyang Si</a> and <a href="https://liuziwei7.github.io/">Ziwei Liu</a>'
   }
 ];
