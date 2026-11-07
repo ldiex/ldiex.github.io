@@ -192,12 +192,14 @@ const publications = [
 const experiences = [
   {
     id: 'dreamx',
+    category: 'industry',
     organization: 'DreamX Team, AMAP, Alibaba Group',
     date: '2026.11 - Present',
     direction: 'Video World Model'
   },
   {
     id: 'kling',
+    category: 'industry',
     logo: 'images/logos/kling.png',
     organization: 'KlingAI Research',
     role: '',
@@ -207,6 +209,7 @@ const experiences = [
   },
   {
     id: 'tencent',
+    category: 'industry',
     logo: 'images/logos/tencent.png',
     organization: 'WeChat, Tencent Inc.',
     role: '',
@@ -216,6 +219,7 @@ const experiences = [
   },
   {
     id: 'nju',
+    category: 'academia',
     logo: 'images/logos/nju.svg',
     organization: 'PRLab@Nanjing University',
     role: '',
@@ -224,6 +228,7 @@ const experiences = [
   },
   {
     id: 'ntu',
+    category: 'academia',
     logo: 'images/logos/ntu.png',
     organization: 'MMLab@Nanyang Technological University',
     role: '',

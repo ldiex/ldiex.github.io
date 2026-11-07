@@ -86,9 +86,8 @@ function renderEducation() {
 }
 
 function renderExperience() {
-  const container = document.getElementById('experience-container');
-
   experiences.forEach(exp => {
+    const container = document.getElementById(`${exp.category}-experience-container`);
     const card = document.createElement('div');
     card.className = 'card experience-card';
 

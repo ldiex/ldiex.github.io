@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+  .academia-grid {
+    grid-template-columns: 1fr;
+  }
+
   .container {
     padding: 40px 16px;
   }

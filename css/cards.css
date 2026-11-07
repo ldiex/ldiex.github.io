@@ -76,6 +76,26 @@
   align-items: flex-start;
 }
 
+.academia-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.academia-grid .card {
+  padding: 16px;
+}
+
+.academia-grid .exp-header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.academia-grid .exp-date {
+  margin-left: 0;
+}
+
 .exp-header {
   display: flex;
   justify-content: space-between;
