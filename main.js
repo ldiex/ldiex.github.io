@@ -5,12 +5,13 @@ const NAV_SECTION_IDS = ['publications', 'education', 'experience', 'awards', 's
  * ============================================ */
 
 function renderPublications() {
-  const selectedContainer = document.getElementById('selected-publications-container');
-  const otherContainer = document.getElementById('other-publications-container');
+  const container = document.getElementById('publications-container');
 
   publications.forEach(pub => {
     const article = document.createElement('article');
     article.className = 'card';
+    article.dataset.highlighted = String(pub.highlighted);
+    article.hidden = !pub.highlighted;
 
     const authorsHTML = pub.authors.map(author => {
       const nameHTML = author.isSelf
@@ -45,11 +46,18 @@ function renderPublications() {
       </div>
     `;
 
-    if (pub.highlighted) {
-      selectedContainer.appendChild(article);
-    } else {
-      otherContainer.appendChild(article);
-    }
+    container.appendChild(article);
+  });
+
+  document.querySelectorAll('.publication-filter').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.publication-filter').forEach(filter => {
+        filter.setAttribute('aria-pressed', String(filter === button));
+      });
+      container.querySelectorAll('.card').forEach(article => {
+        article.hidden = button.dataset.filter === 'selected' && article.dataset.highlighted !== 'true';
+      });
+    });
   });
 }
 

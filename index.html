@@ -78,16 +78,15 @@
     </header>
 
     <section id="publications">
-      <h2 class="section-title">Publications</h2>
-      <div class="subsection">
-        <h3 class="subsection-title">Selected Publications</h3>
-        <p class="equal-contribution-note">* Denotes Equal Contribution.</p>
-        <div class="card-grid" id="selected-publications-container"></div>
+      <div class="section-title publications-heading">
+        <h2>Publications</h2>
+        <div class="publication-filters" role="group" aria-label="Publication filter">
+          <button type="button" class="publication-filter" data-filter="selected" aria-pressed="true">Selected</button>
+          <button type="button" class="publication-filter" data-filter="full" aria-pressed="false">Full List</button>
+        </div>
       </div>
-      <div class="subsection">
-        <h3 class="subsection-title">Other Publications</h3>
-        <div class="card-grid" id="other-publications-container"></div>
-      </div>
+      <p class="equal-contribution-note">* Denotes Equal Contribution.</p>
+      <div class="card-grid" id="publications-container"></div>
     </section>
 
     <section id="education">

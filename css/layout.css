@@ -115,6 +115,49 @@ section {
   margin-bottom: 16px;
 }
 
+.publications-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+}
+
+.publications-heading h2 {
+  font: inherit;
+}
+
+.publication-filters {
+  display: flex;
+  gap: 20px;
+}
+
+.publication-filter {
+  padding: 4px 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.publication-filter:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
+.publication-filter:hover {
+  color: var(--accent-color);
+}
+
+.publication-filter[aria-pressed="true"] {
+  border-bottom-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
 .text-secondary-sm {
   color: var(--text-secondary);
   font-size: 14.5px;
